@@ -1,0 +1,9 @@
+@use "../palette" as palette;
+
+.mat-datepicker-popup {
+  --mat-datepicker-calendar-container-background-color: #{palette.$outline-variant};
+}
+
+.mat-mdc-form-field-type-mat-date-range-input {
+  background: palette.$outline-variant;
+}

@@ -1,0 +1,5 @@
+@use "../palette" as palette;
+
+.mat-mdc-autocomplete-panel {
+  --mat-autocomplete-background-color: #{palette.$surface-container};
+}

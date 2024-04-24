@@ -1,0 +1,9 @@
+@use "../palette" as palette;
+
+.mat-mdc-select-panel {
+  --mat-select-panel-background-color: #{palette.$outline};
+}
+
+.mdc-list-item__primary-text {
+  width: 100%;
+}

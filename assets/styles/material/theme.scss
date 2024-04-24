@@ -1,0 +1,110 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$custom-orange-palette: (
+  50: #fff7ef,
+  100: #ffead8,
+  200: #ffdcbe,
+  300: #ffcea4,
+  400: #ffc491,
+  500: #ffb97d,
+  600: #ffb275,
+  700: #ffaa6a,
+  800: #ffa260,
+  900: #ff934d,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff8f3,
+  A700: #ffe8da,
+  contrast: (
+    50: #0d0c1c,
+    100: #0d0c1c,
+    200: #0d0c1c,
+    300: #0d0c1c,
+    400: #0d0c1c,
+    500: #0d0c1c,
+    600: #0d0c1c,
+    700: #0d0c1c,
+    800: #0d0c1c,
+    900: #0d0c1c,
+    A100: #0d0c1c,
+    A200: #0d0c1c,
+    A400: #0d0c1c,
+    A700: #0d0c1c,
+  ),
+);
+
+$custom-red-palette: (
+  50: #fdefef,
+  100: #fad7d7,
+  200: #f6bcbc,
+  300: #f2a1a1,
+  400: #f08d8d,
+  500: #ed7979,
+  600: #eb7171,
+  700: #e86666,
+  800: #e55c5c,
+  900: #e04949,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffd2d2,
+  A700: #ffb8b8,
+  contrast: (
+    50: #0d0c1c,
+    100: #0d0c1c,
+    200: #0d0c1c,
+    300: #0d0c1c,
+    400: #0d0c1c,
+    500: #0d0c1c,
+    600: #0d0c1c,
+    700: #0d0c1c,
+    800: #0d0c1c,
+    900: #0d0c1c,
+    A100: #0d0c1c,
+    A200: #0d0c1c,
+    A400: #0d0c1c,
+    A700: #0d0c1c,
+  ),
+);
+
+$color-theme-primary: mat.define-palette($custom-orange-palette);
+$color-theme-accent: mat.define-palette($custom-orange-palette, A100);
+$color-theme-warn: mat.define-palette($custom-red-palette);
+
+$typography-14-normal: mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 14px,
+  $line-height: 1,
+  $letter-spacing: normal,
+);
+
+$body-1-level: $typography-14-normal;
+$body-2-level: $typography-14-normal;
+$caption-level: $typography-14-normal;
+$button-level: $typography-14-normal;
+
+$theme-typography: mat.define-typography-config(
+  $font-family: Roboto,
+  $body-1: $body-1-level,
+  $body-2: $body-2-level,
+  $caption: $caption-level,
+  $button: $button-level,
+);
+
+$custom-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $color-theme-primary,
+      accent: $color-theme-accent,
+      warn: $color-theme-warn,
+    ),
+    typography: $theme-typography,
+    density: -4,
+  )
+);
+
+@include mat.all-component-themes($custom-theme);
+@include mat.button-density(-1);
+@include mat.table-typography(mat.define-typography-config($font-family: Roboto));

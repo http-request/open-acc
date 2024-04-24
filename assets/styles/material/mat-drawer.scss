@@ -1,0 +1,11 @@
+@use "../palette" as palette;
+
+.mat-drawer {
+  background: palette.$surface;
+  --mat-sidenav-container-background-color: #{palette.$on-primary};
+}
+
+.mat-drawer-content {
+  overflow-x: hidden !important;
+  background: palette.$surface;
+}

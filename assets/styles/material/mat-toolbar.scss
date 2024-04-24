@@ -1,0 +1,5 @@
+@use "../palette" as palette;
+
+.mat-toolbar {
+  --mat-toolbar-container-background-color: #{palette.$surface};
+}

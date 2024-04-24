@@ -1,0 +1,5 @@
+@use "../palette" as palette;
+
+.mat-mdc-menu-panel {
+  --mat-menu-container-color: #{palette.$outline};
+}

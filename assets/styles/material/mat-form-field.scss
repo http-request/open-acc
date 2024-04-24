@@ -1,0 +1,28 @@
+@use "../palette" as palette;
+
+.mat-mdc-text-field-wrapper {
+  background-color: palette.$surface-container;
+}
+
+mat-form-field {
+  --mdc-filled-text-field-container-color: #{palette.$surface-container};
+  --mdc-filled-text-field-disabled-container-color: #{palette.$surface-container};
+  --mat-form-field-container-text-line-height: 24px;
+
+  .mat-mdc-form-field-error {
+    font-size: 11px;
+    margin-top: -5px;
+  }
+}
+
+
+mat-label {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+mat-hint {
+  opacity: .9;
+  font-size: 12px;
+  font-weight: 400;
+}

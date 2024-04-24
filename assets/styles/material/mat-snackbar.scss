@@ -1,0 +1,42 @@
+@use "../palette" as palette;
+
+.mat-mdc-snack-bar-container {
+  --mdc-snackbar-container-color: #{palette.$outline};
+
+  &.app-snack-bar {
+    & .notification {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: palette.$on-surface;
+
+      &__message {
+        display: flex;
+        line-height: 24px;
+        margin-top: 12px;
+      }
+
+      mat-icon {
+        margin-right: 5px;
+      }
+    }
+
+    &.success {
+      mat-icon {
+        color: palette.$positive-balance;
+      }
+    }
+
+    &.error {
+      mat-icon {
+        color: palette.$err-primary;
+      }
+    }
+
+    &.info {
+      mat-icon {
+        color: palette.$primary;
+      }
+    }
+  }
+}

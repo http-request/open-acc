@@ -1,0 +1,14 @@
+@use "../palette" as palette;
+
+.mat-mdc-radio-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mat-mdc-radio-group.mat-radio-group-invalid {
+    .mat-mdc-radio-button {
+        --mdc-form-field-label-text-color: #{palette.$err-primary};
+        --mdc-radio-unselected-icon-color: #{palette.$err-primary};
+    }
+}

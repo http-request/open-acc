@@ -1,0 +1,26 @@
+@use "../palette" as palette;
+
+mat-table {
+  height: 100%;
+  overflow: auto;
+  --mat-table-background-color: #{palette.$surface-bright};
+
+  mat-row,
+  mat-header-row,
+  mat-footer-row {
+    min-height: 40px;
+  }
+
+  .mat-mdc-cell:last-child,
+  .mat-mdc-header-cell:last-child {
+    padding-right: 20px;
+  }
+
+  .mat-mdc-row {
+    font-size: 13px;
+  }
+}
+
+.mat-mdc-row.selected {
+  background-color: palette.$surface-container;
+}

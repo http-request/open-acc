@@ -1,0 +1,5 @@
+@use "../palette" as palette;
+
+mat-stepper {
+    --mat-stepper-container-color: palette.$surface;
+}

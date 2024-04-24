@@ -1,0 +1,12 @@
+@use "../palette" as palette;
+
+.mat-button-toggle-group {
+  --mat-standard-button-toggle-divider-color: #{palette.$outline};
+}
+
+.mat-button-toggle {
+  --mat-standard-button-toggle-background-color: #{palette.$surface-bright};
+  --mat-standard-button-toggle-selected-state-background-color: #{palette.$outline};
+  --mat-standard-button-toggle-height: 32px;
+  --mat-legacy-button-toggle-shape: 4px;
+}

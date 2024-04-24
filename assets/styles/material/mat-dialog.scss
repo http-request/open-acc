@@ -1,0 +1,5 @@
+@use "../palette" as palette;
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-color: #{palette.$outline-variant};
+}

@@ -1,0 +1,6 @@
+@use "../palette" as palette;
+
+.mat-mdc-checkbox.mat-checkbox-invalid {
+    --mdc-form-field-label-text-color: #{palette.$err-primary};
+    --mdc-checkbox-unselected-icon-color: #{palette.$err-primary};
+}
